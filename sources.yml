@@ -1,0 +1,27 @@
+# Feeds the pipeline reads. Add or remove freely; each needs a name and url.
+# NOTE: these URLs have not been test-fetched. Run `python ingest.py --check` once to see which respond.
+feeds:
+  # Google News searches are the broadest net. Edit the queries to widen or narrow coverage.
+  - name: "Google News: ATS"
+    url: https://news.google.com/rss/search?q=%22applicant+tracking+system%22+when:7d&hl=en-US&gl=US&ceid=US:en
+  - name: "Google News: AI recruiting"
+    url: https://news.google.com/rss/search?q=%22AI+recruiting%22+OR+%22agentic+recruiting%22+when:7d&hl=en-US&gl=US&ceid=US:en
+  - name: "Google News: recruiting funding"
+    url: https://news.google.com/rss/search?q=recruiting+startup+raises+OR+%22talent+acquisition%22+acquires+when:7d&hl=en-US&gl=US&ceid=US:en
+  - name: "Google News: major vendors"
+    url: https://news.google.com/rss/search?q=Workday+recruiting+OR+iCIMS+OR+Greenhouse+recruiting+OR+Phenom+OR+Eightfold+OR+SmartRecruiters+when:7d&hl=en-US&gl=US&ceid=US:en
+  - name: "Google News: AI hiring law"
+    url: https://news.google.com/rss/search?q=%22AI+hiring%22+law+OR+lawsuit+OR+regulation+when:7d&hl=en-US&gl=US&ceid=US:en
+  - name: "Google News: hiring fraud"
+    url: https://news.google.com/rss/search?q=deepfake+candidates+OR+%22fake+candidates%22+hiring+when:7d&hl=en-US&gl=US&ceid=US:en
+  - name: "Google News: HR tech events"
+    url: https://news.google.com/rss/search?q=%22HR+Tech%22+OR+%22Recruiting+Innovation+Summit%22+OR+%22SHRM+Talent%22+when:14d&hl=en-US&gl=US&ceid=US:en
+  - name: "Google News: analyst ratings"
+    url: https://news.google.com/rss/search?q=%22Magic+Quadrant%22+OR+%22PEAK+Matrix%22+OR+%229-Grid%22+talent+acquisition+when:30d&hl=en-US&gl=US&ceid=US:en
+  # Publisher feeds (verify the URLs respond)
+  - name: HR Dive
+    url: https://www.hrdive.com/feeds/news/
+  - name: ERE
+    url: https://www.ere.net/feed/
+  - name: HR Executive
+    url: https://hrexecutive.com/feed/

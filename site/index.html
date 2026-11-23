@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Talent Tech Radar</title>
+<style>
+:root{--bg:#f7f6f2;--card:#fff;--ink:#1c1c1a;--mute:#6b6a64;--line:#e4e2da;--acc:#0f6e56;--accbg:#e1f5ee}
+@media (prefers-color-scheme:dark){:root{color-scheme:dark;--bg:#141413;--card:#1f1f1d;--ink:#eeede8;--mute:#9b9a92;--line:#33332f;--acc:#5dcaa5;--accbg:#0f3a2e}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:20px 16px 48px}
+h1{font-size:24px;margin:0;font-weight:600}
+.sub{color:var(--mute);font-size:13px;margin:2px 0 16px}
+.tools{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+input{flex:1;min-width:180px;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink);font:inherit}
+.chip{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:99px;padding:4px 11px;font:inherit;font-size:13px;cursor:pointer}
+.chip:focus-visible,input:focus-visible,a:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+.chip.on{background:var(--acc);color:var(--bg);border-color:var(--acc)}
+.item{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin-bottom:9px}
+.item h3{font-size:15px;margin:4px 0;font-weight:600}
+.item h3 a{color:inherit;text-decoration:none}
+.item h3 a:hover{text-decoration:underline}
+.item p{margin:0;color:var(--mute);font-size:13.5px}
+.meta{display:flex;gap:8px;flex-wrap:wrap;font-size:12px;color:var(--mute);align-items:center}
+.tag{padding:1px 8px;border-radius:99px;background:var(--accbg);color:var(--acc);font-weight:500}
+.empty{color:var(--mute);padding:24px;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Talent Tech Radar</h1>
+<p class="sub" id="upd">Loading…</p>
+<div class="tools"><input id="q" type="search" placeholder="Search headlines, vendors, topics"></div>
+<div class="tools" id="chips"></div>
+<div id="list"></div>
+</div>
+<script>
+let items=[],cat="All",q="";
+const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/[&<>"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]));
+function render(){
+  const cats=["All","All AI",...new Set(items.map(i=>i.category))];
+  $("chips").innerHTML=cats.map(c=>`<button class="chip ${c===cat?"on":""}" data-c="${esc(c)}">${esc(c)}</button>`).join("");
+  $("chips").querySelectorAll("button").forEach(b=>b.onclick=()=>{cat=b.dataset.c;render()});
+  const term=q.toLowerCase();
+  const rows=items.filter(i=>(cat==="All"||(cat==="All AI"?i.category.startsWith("AI"):i.category===cat))&&
+    (i.title+" "+i.summary+" "+(i.vendors||[]).join(" ")).toLowerCase().includes(term));
+  $("list").innerHTML=rows.length?rows.map(i=>`<div class="item"><div class="meta"><span class="tag">${esc(i.category)}</span>${esc(i.date)} · ${esc(i.source)}</div>
+  <h3><a href="${esc(i.url)}" target="_blank" rel="noopener">${esc(i.title)}</a></h3><p>${esc(i.summary)}</p>
+  ${(i.vendors||[]).length?`<div class="meta" style="margin-top:6px">${i.vendors.map(esc).join(", ")}</div>`:""}</div>`).join(""):
+  `<div class="empty">No items match. Clear the search or pick another category.</div>`;
+}
+$("q").oninput=e=>{q=e.target.value;render()};
+fetch("data/items.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{
+  items=d.items;
+  $("upd").textContent="Last refreshed "+new Date(d.updated).toLocaleString()+" · "+items.length+" items";
+  render();
+}).catch(()=>{$("upd").textContent="Could not load data/items.json. Serve this folder over http (for example GitHub Pages), not as a local file."});
+</script>
+</body>
+</html>
