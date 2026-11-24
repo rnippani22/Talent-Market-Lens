@@ -3,60 +3,324 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Talent Tech Radar</title>
+<title>Talent Market Lens</title>
+<meta name="description" content="Live intelligence on recruitment technology, applicant tracking systems and AI in hiring.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f7f6f2;--card:#fff;--ink:#1c1c1a;--mute:#6b6a64;--line:#e4e2da;--acc:#0f6e56;--accbg:#e1f5ee}
-@media (prefers-color-scheme:dark){:root{color-scheme:dark;--bg:#141413;--card:#1f1f1d;--ink:#eeede8;--mute:#9b9a92;--line:#33332f;--acc:#5dcaa5;--accbg:#0f3a2e}}
+:root{--paper:#f8f6fb;--card:#fff;--ink:#1e1530;--mute:#6a6280;--line:#e4deee;--plum:#2a1745;--plum2:#3d2461;--lilac:#d9c9f5;--amber:#f5a524;--amberbg:#fdf0d5;--teal:#0f8b8d;--tealbg:#ddf3f3;--pbg:#efe8fa;--pink:#5b2a86}
+@media (prefers-color-scheme:dark){:root{color-scheme:dark;--paper:#15101f;--card:#1e1730;--ink:#f1ecf8;--mute:#a79fbc;--line:#352b4a;--amberbg:#3a2a0c;--teal:#4fd1d3;--tealbg:#0f3536;--pbg:#2a2040;--pink:#c9a8f0}}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
-.wrap{max-width:900px;margin:0 auto;padding:20px 16px 48px}
-h1{font-size:24px;margin:0;font-weight:600}
-.sub{color:var(--mute);font-size:13px;margin:2px 0 16px}
-.tools{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
-input{flex:1;min-width:180px;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink);font:inherit}
-.chip{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:99px;padding:4px 11px;font:inherit;font-size:13px;cursor:pointer}
-.chip:focus-visible,input:focus-visible,a:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
-.chip.on{background:var(--acc);color:var(--bg);border-color:var(--acc)}
-.item{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin-bottom:9px}
-.item h3{font-size:15px;margin:4px 0;font-weight:600}
-.item h3 a{color:inherit;text-decoration:none}
-.item h3 a:hover{text-decoration:underline}
-.item p{margin:0;color:var(--mute);font-size:13.5px}
-.meta{display:flex;gap:8px;flex-wrap:wrap;font-size:12px;color:var(--mute);align-items:center}
-.tag{padding:1px 8px;border-radius:99px;background:var(--accbg);color:var(--acc);font-weight:500}
-.empty{color:var(--mute);padding:24px;text-align:center}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important}}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 "Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","Public Sans",system-ui,sans-serif;line-height:1.15;margin:0}
+a{color:inherit}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
+.skip{position:absolute;left:-999px}.skip:focus{left:8px;top:8px;background:#fff;color:#000;padding:8px;z-index:99}
+.in{max-width:1040px;margin:0 auto;padding:0 20px}
+/* nav */
+.top{position:sticky;top:0;z-index:20;background:var(--plum);color:#fff}
+.bar{display:flex;align-items:center;gap:20px;max-width:1040px;margin:0 auto;padding:0 20px;height:52px}
+.brand{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;text-decoration:none;white-space:nowrap}
+.bar nav{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.bar nav a{color:var(--lilac);text-decoration:none;font-size:14px;padding:6px 10px;border-radius:6px;white-space:nowrap}
+.bar nav a:hover{background:var(--plum2);color:#fff}
+/* hero */
+.hero{background:linear-gradient(180deg,var(--plum),#1b0f2e);color:#fff;padding:56px 0 40px}
+.hero h1{font-size:clamp(32px,5.2vw,54px);font-weight:700;max-width:18ch}
+.lead{font-size:18px;color:#e6dcf7;max-width:62ch;margin:18px 0 26px}
+.live{display:flex;flex-wrap:wrap;gap:10px 28px;margin-bottom:34px}
+.live div{font-size:13px;color:var(--lilac)}
+.live b{display:block;font-family:"Bricolage Grotesque",sans-serif;font-size:28px;color:#fff;font-weight:700;line-height:1.1}
+.live i{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--amber);margin-right:6px}
+.pipe{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:0;position:relative}
+.pipe li{padding:14px 12px 0 0;border-top:3px solid var(--plum2);position:relative}
+.pipe li::before{content:"";position:absolute;top:-3px;left:0;height:3px;width:0;background:var(--amber);animation:fill .9s ease-out forwards}
+.pipe li:nth-child(2)::before{animation-delay:.15s}.pipe li:nth-child(3)::before{animation-delay:.3s}.pipe li:nth-child(4)::before{animation-delay:.45s}.pipe li:nth-child(5)::before{animation-delay:.6s}
+@keyframes fill{to{width:100%}}
+.pipe a{text-decoration:none;font-weight:600;font-size:15px}
+.pipe span{display:block;font-size:12.5px;color:var(--lilac);margin-top:2px}
+/* sections */
+section{padding:56px 0}
+section.alt{background:var(--card);border-block:1px solid var(--line)}
+.sh{margin-bottom:26px;max-width:66ch}
+.sh h2{font-size:clamp(26px,3.4vw,36px);font-weight:700}
+.sh p{color:var(--mute);margin:8px 0 0}
+.grid{display:grid;gap:14px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.g5{grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
+.box{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
+section.alt .box{background:var(--paper)}
+.box h3{font-size:17px;margin-bottom:6px}
+.box p{margin:0;color:var(--mute);font-size:14.5px}
+.v{display:inline-block;margin:8px 6px 0 0;padding:2px 9px;border:1px solid var(--line);border-radius:99px;font-size:12.5px;background:var(--card)}
+/* items */
+.item{padding:14px 0;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:0}
+.item h3{font-size:16.5px;margin:6px 0 4px;font-family:"Public Sans",sans-serif;font-weight:600;line-height:1.35}
+.item h3 a{text-decoration:none}.item h3 a:hover{text-decoration:underline}
+.item p{margin:0;color:var(--mute);font-size:14.5px}
+.meta{display:flex;flex-wrap:wrap;gap:4px 10px;font-size:12.5px;color:var(--mute);align-items:center}
+.tag{padding:1px 9px;border-radius:99px;font-weight:600;background:var(--pbg);color:var(--pink)}
+.tag.ai{background:var(--tealbg);color:var(--teal)}.tag.biz{background:var(--amberbg);color:#9a5b00}
+@media (prefers-color-scheme:dark){.tag.biz{color:var(--amber)}}
+.lead-item{background:var(--plum);color:#fff;border-radius:14px;padding:22px}
+.lead-item .meta{color:var(--lilac)}.lead-item h3{font-size:24px;font-family:"Bricolage Grotesque",sans-serif;font-weight:700;margin:10px 0}
+.lead-item p{color:#e6dcf7}
+.cols{display:grid;grid-template-columns:1.3fr 1fr;gap:28px}.cols>*{min-width:0}.cols.one{grid-template-columns:minmax(0,720px)}[hidden]{display:none!important}
+@media (max-width:820px){.cols{grid-template-columns:minmax(0,1fr)}.pipe{grid-template-columns:1fr 1fr}.pipe li{margin-bottom:14px}}
+.stat b{display:block;font-family:"Bricolage Grotesque",sans-serif;font-size:34px;line-height:1.1;color:var(--teal)}
+.stat span{font-size:14px}.stat small{display:block;color:var(--mute);margin-top:4px;font-size:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}
+.chip{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:99px;padding:5px 13px;font:inherit;font-size:13.5px;cursor:pointer}
+.chip[aria-pressed=true]{background:var(--plum);color:#fff;border-color:var(--plum)}
+input[type=search]{width:100%;max-width:420px;padding:9px 12px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink);font:inherit;margin-bottom:12px}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--card)}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12.5px;color:var(--mute);font-weight:600}tr:last-child td{border-bottom:0}
+td:first-child{font-weight:600;white-space:nowrap}
+.note{font-size:13px;color:var(--mute);margin-top:12px}
+.tl{list-style:none;margin:0;padding:0 0 0 18px;border-left:2px solid var(--lilac)}
+.tl li{margin:0 0 14px;position:relative}.tl li::before{content:"";position:absolute;left:-24px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--amber)}
+.tl b{display:block;font-size:13px;color:var(--pink)}
+dl{margin:0}dt{font-weight:600;margin-top:10px}dd{margin:0;color:var(--mute);font-size:14.5px}
+.empty{color:var(--mute);padding:18px 0}
+.pulse{display:grid;grid-template-columns:1.1fr 1fr;gap:22px;align-items:start}
+@media (max-width:820px){.pulse{grid-template-columns:minmax(0,1fr)}}
+.pulse>*{min-width:0}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+section.alt .panel{background:var(--paper)}
+.panel h3,.digest h3{font-size:20px}
+.ph{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.br{display:grid;grid-template-columns:minmax(96px,150px) 1fr 28px;align-items:center;gap:10px;margin:9px 0;font-size:13.5px}
+.track{display:block;background:var(--pbg);border-radius:7px;height:14px}
+.track i{display:block;height:14px;border-radius:7px;background:var(--plum2);width:var(--w);animation:grow .7s ease-out}
+.track i.ai{background:var(--teal)}.track i.biz{background:var(--amber)}
+.br b{text-align:right;font-variant-numeric:tabular-nums}
+@keyframes grow{from{width:0}}
+.spark{display:flex;align-items:flex-end;gap:4px;height:64px;margin-top:8px}
+.spark i{flex:1;background:var(--lilac);border-radius:3px 3px 0 0;height:var(--h)}
+.spark i.today{background:var(--amber)}
+.key{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12.5px;color:var(--mute);margin-top:12px}
+.key span::before{content:"";display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;background:var(--plum2)}
+.key .k1::before{background:var(--teal)}.key .k2::before{background:var(--amber)}
+.digest{background:var(--plum);color:#fff;border-radius:14px;padding:20px}
+.digest p{color:var(--lilac);margin:6px 0 0;font-size:14px}
+.digest pre{white-space:pre-wrap;overflow-wrap:anywhere;font:13px/1.55 "Public Sans",system-ui,sans-serif;background:#1b0f2e;border-radius:10px;padding:14px;max-height:340px;overflow:auto;margin:14px 0;color:#e6dcf7}
+.btn{background:var(--amber);color:#2a1745;border:0;border-radius:8px;padding:9px 16px;font:600 14px "Public Sans",system-ui,sans-serif;cursor:pointer}
+.digest small{color:var(--lilac);margin-left:10px}
+footer{background:var(--plum);color:var(--lilac);padding:36px 0;font-size:14px}
+footer b{color:#fff}
 </style>
 </head>
-<body>
-<div class="wrap">
-<h1>Talent Tech Radar</h1>
-<p class="sub" id="upd">Loading…</p>
-<div class="tools"><input id="q" type="search" placeholder="Search headlines, vendors, topics"></div>
-<div class="tools" id="chips"></div>
-<div id="list"></div>
-</div>
+<body id="top">
+<a class="skip" href="#signals">Skip to content</a>
+<header class="top"><div class="bar"><a class="brand" href="#top">Talent Market Lens</a>
+<nav aria-label="Sections"><a href="#signals">Latest</a><a href="#pulse" id="navPulse" hidden>This week</a><a href="#fit">How it fits</a><a href="#ai">AI in hiring</a><a href="#deals">Deals</a><a href="#analysts">Analysts</a><a href="#events">Events</a><a href="#basics">Basics</a><a href="#all" id="navAll" hidden>All news</a></nav></div></header>
+
+<main>
+<section class="hero"><div class="in">
+<h1>Where hiring technology is heading, and what it means for HR</h1>
+<p class="lead">Applicant tracking systems began as filing cabinets for applications. Now they are turning into AI agents that source, screen, schedule and interview. This page follows the vendors, the funding, the analysts and the rules, and refreshes every six hours so your team does not have to chase it.</p>
+<div class="live" id="live"></div>
+<ol class="pipe" id="pipe"></ol>
+</div></section>
+
+<section id="signals"><div class="in">
+<div class="sh"><h2 id="sigh">What just happened</h2><p id="sigp">The newest items, picked up automatically from trade press and news feeds.</p></div>
+<div class="cols" id="sigcols"><div id="sig"></div><div><h3 id="shh" style="font-size:20px;margin-bottom:10px">Five shifts to watch</h3><div id="shifts"></div></div></div>
+</div></section>
+
+<section id="pulse" class="alt" hidden><div class="in">
+<div class="sh"><h2>The week at a glance</h2><p>Where the news is concentrated, and a ready-to-send summary for your team.</p></div>
+<div class="pulse">
+<div class="panel"><div class="ph"><h3>What the news is about</h3><div class="chips" id="wchips" style="margin:0" role="group" aria-label="Time window"></div></div>
+<div id="bars"></div>
+<div class="key"><span class="k1">AI in hiring</span><span class="k2">Funding and M&amp;A</span><span>Other</span></div>
+<div id="sparkwrap"><h3 style="font-size:15px;margin-top:20px">Items per day, last 14 days</h3><div class="spark" id="spark" role="img" aria-label="Items per day over the last 14 days"></div></div></div>
+<div class="digest" id="digest"><h3>Team digest</h3><p>Copy this into an email or chat message.</p><pre id="dg" tabindex="0"></pre><button class="btn" id="cp" type="button">Copy digest</button><small id="cps" aria-live="polite"></small></div>
+</div></div></section>
+
+<section id="fit"><div class="in">
+<div class="sh"><h2>How hiring technology fits together</h2><p>A hire passes through five jobs. Big suites such as Workday and SAP cover several of them, while newer specialists compete on one. Vendors below are examples, not a complete list.</p></div>
+<div class="grid g5" id="stages"></div>
+</div></section>
+
+<section id="ai" class="alt"><div class="in">
+<div class="sh"><h2>AI in hiring</h2><p>The fastest-moving part of the market. These figures come from vendor-run surveys, so read them as signals rather than industry-wide measures.</p></div>
+<div class="grid g3" id="stats" style="margin-bottom:26px"></div>
+<div id="aifeed" hidden><div class="chips" id="aichips" role="group" aria-label="AI topic"></div>
+<div id="ailist"></div></div>
+<div class="box" style="margin-top:22px"><h3>Questions worth asking any AI hiring vendor</h3>
+<p>Who makes the final decision, the system or a person? What bias testing has been done, and can you see it? Are candidates told AI is involved? How is identity checked, given the rise in fake candidates? Where does candidate data go?</p></div>
+</div></section>
+
+<section id="deals"><div class="in">
+<div class="sh"><h2>Money and deals</h2><p>Funding shows where investors expect the market to go. Acquisitions show who is consolidating it.</p></div>
+<div class="cols" id="dcols"><div id="dwrap" hidden><h3 style="font-size:20px;margin-bottom:6px">Latest funding and M&amp;A</h3><div id="dlist"></div></div>
+<div><h3 style="font-size:20px;margin-bottom:10px">Biggest recent rounds</h3><div class="tw"><table id="fund"></table></div><p class="note">Latest disclosed round per company; dates differ.</p></div></div>
+</div></section>
+
+<section id="analysts" class="alt"><div class="in">
+<div class="sh"><h2>What the analysts say</h2><p>Independent ratings help when comparing vendors. They are published on a schedule, so the table also shows when each was last updated.</p></div>
+<div class="tw" style="margin-bottom:22px"><table id="cad"></table></div>
+<div class="chips" id="anchips" role="group" aria-label="Analyst"></div>
+<div class="tw"><table id="an"></table></div>
+<p class="note">Most placements come from vendor announcements and secondary summaries, and sources disagree on whether iCIMS is a Gartner Leader. Vendors without a publicly sourced rating are not shown. Check the full reports before relying on them. Fosway's grid takes an EMEA lens.</p>
+</div></section>
+
+<section id="events"><div class="in">
+<div class="sh"><h2>Events</h2><p>What to book, and what you missed.</p></div>
+<div class="cols"><div><h3 style="font-size:20px;margin-bottom:6px">Coming up</h3><div id="up"></div></div><div><h3 style="font-size:20px;margin-bottom:6px">Recently held</h3><div id="done"></div></div></div>
+<p class="note">Dates come from third-party calendars. Confirm with the organiser before booking.</p>
+</div></section>
+
+<section id="basics" class="alt"><div class="in">
+<div class="sh"><h2>Hiring tech basics</h2><p>Background for anyone newer to the space.</p></div>
+<div class="cols"><div><h3 style="font-size:20px;margin-bottom:14px">How the market got here</h3><ul class="tl" id="tl"></ul></div>
+<div><h3 style="font-size:20px;margin-bottom:4px">Plain-English glossary</h3><dl id="gl"></dl></div></div>
+</div></section>
+
+<section id="all" hidden><div class="in">
+<div class="sh"><h2>Everything we track</h2><p>Search all items, or filter by category.</p></div>
+<input type="search" id="q" placeholder="Search headlines, vendors, topics" aria-label="Search">
+<div class="chips" id="cc" role="group" aria-label="Category"></div>
+<div id="alist"></div>
+</div></section>
+</main>
+
+<footer><div class="in"><p><b>About this page.</b> A scheduled job reads trade and news feeds every six hours, removes duplicates and off-topic items, then categorises and summarises each one. Only headlines, links and short summaries are kept; follow the link for the full story. Automated categories can be wrong. Analyst and event sections are curated by hand. Nothing here is legal or financial advice.</p></div></footer>
+
 <script>
-let items=[],cat="All",q="";
 const $=id=>document.getElementById(id);
-const esc=s=>String(s).replace(/[&<>"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]));
-function render(){
-  const cats=["All","All AI",...new Set(items.map(i=>i.category))];
-  $("chips").innerHTML=cats.map(c=>`<button class="chip ${c===cat?"on":""}" data-c="${esc(c)}">${esc(c)}</button>`).join("");
-  $("chips").querySelectorAll("button").forEach(b=>b.onclick=()=>{cat=b.dataset.c;render()});
-  const term=q.toLowerCase();
-  const rows=items.filter(i=>(cat==="All"||(cat==="All AI"?i.category.startsWith("AI"):i.category===cat))&&
-    (i.title+" "+i.summary+" "+(i.vendors||[]).join(" ")).toLowerCase().includes(term));
-  $("list").innerHTML=rows.length?rows.map(i=>`<div class="item"><div class="meta"><span class="tag">${esc(i.category)}</span>${esc(i.date)} · ${esc(i.source)}</div>
-  <h3><a href="${esc(i.url)}" target="_blank" rel="noopener">${esc(i.title)}</a></h3><p>${esc(i.summary)}</p>
-  ${(i.vendors||[]).length?`<div class="meta" style="margin-top:6px">${i.vendors.map(esc).join(", ")}</div>`:""}</div>`).join(""):
-  `<div class="empty">No items match. Clear the search or pick another category.</div>`;
+const esc=s=>String(s??'').replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]));
+const MO=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const fd=d=>{const p=d.split('-');return (p[2]?+p[2]+' ':'')+MO[p[1]-1]+' '+p[0]};
+const AI=c=>c.startsWith('AI'),BIZ=c=>c==='Funding'||c==='M&A';
+const tag=c=>`<span class="tag ${AI(c)?'ai':BIZ(c)?'biz':''}">${esc(c.replace('AI: ',''))}</span>`;
+const ONE=(i,big)=>`<div class="item"><div class="meta">${tag(i.category)}<span>${fd(i.date)}</span><span>${esc(i.source)}</span></div><h3><a href="${esc(i.url)}" target="_blank" rel="noopener">${esc(i.title)}</a></h3>${i.summary?`<p>${esc(i.summary)}</p>`:''}</div>`;
+const table=(el,head,rows)=>{el.innerHTML=`<tr>${head.map(h=>`<th>${h}</th>`).join('')}</tr>`+rows.map(r=>`<tr>${r.map(c=>`<td>${c==='—'?'<span style="color:var(--mute)">—</span>':esc(c)}</td>`).join('')}</tr>`).join('')};
+
+/* ---------- curated content ---------- */
+const STAGES=[
+['Source','Finding people before they apply',['LinkedIn Hiring Assistant','Juicebox','Findem','Paraform','Archer','Joveo']],
+['Screen and engage','Answering candidates, screening and scheduling at volume',['Paradox (Workday)','iCIMS High Volume Hiring','Humanly','Metaview','Jooba']],
+['Interview and assess','Structured and AI-led interviews',['Phenom AI Interviewer','Alex','micro1','HeyMilo']],
+['Track and decide','The system of record: requisitions, pipeline, offers, compliance',['Workday','SAP SuccessFactors','Oracle','iCIMS','Darwinbox','Ashby','Spott (agencies)']],
+['Verify and onboard','Checking identity and background as fraud rises',['Checkr']]];
+const SHIFTS=[
+['Agents, not assistants','Vendors from Workday to Metaview now pitch agents that source, screen and schedule, not tools that only suggest.'],
+['Consolidation','Workday and SAP each bought a leading specialist within a year. Independent point tools face pressure to be acquired or to specialise.'],
+['Legal exposure for vendors','Mobley v. Workday tests whether an AI vendor can be liable alongside employers. No court has found Workday liable.'],
+['Money is concentrated','A few large rounds (Mercor, Juicebox) dominate, while seed-stage activity stays steady.'],
+['Candidates get their own agents','Archer and Jack & Jill build AI that represents candidates, not only recruiters.']];
+const STATS=[['52%','of employers already use AI interviews','Greenhouse employer survey, Nov 2026'],['7%','would let an AI agent decide who advances','Greenhouse employer survey, Nov 2026'],['40%','of US hiring managers have interviewed a fake identity','Checkr Hiring Hoax 2026'],['2 Dec 2027','EU high-risk AI hiring obligations now apply','EU Digital Omnibus (Reg. 2026/1744)']];
+const FUND=[['Mercor','Marketplace','$350M','Latest disclosed'],['Juicebox','Sourcing','$80M','Series B, Mar 2026'],['Metaview','Agentic recruiting','$60M','Series C, Sep 2026'],['Findem','Talent data','$51M','Latest disclosed'],['Ashby','ATS','$50M','Series D'],['Jack & Jill','AI recruiter','$40M','Series A, Sep 2026'],['Paraform','Marketplace','$40M','Series B, Mar 2026'],['Humanly','Conversational','$25M','Series B, May 2026'],['Spott','Agency ATS','$21M','Series A, Sep 2026'],['Archer','Matching','$10M','Nov 2026']];
+const CAD=[['Gartner Magic Quadrant, TA (Recruiting) Suites','8 May 2026','Not announced. Annual so far, so a 2027 edition is plausible'],['Fosway 9-Grid, Talent Acquisition','May 2026','Not announced'],['Gartner Peer Insights, TA suites','2026 edition, Nov 2026','Not announced'],['Everest Group PEAK Matrix','2026 editions (RPO, Skills Intelligence)','Not announced'],['IDC MarketScape','2025 edition, per vendors','Not announced']];
+const AN=[
+['Workday','Leader; claims top score for high-volume hiring','—','—'],['Oracle','Leader','—','—'],['Darwinbox','Leader','—','—'],
+['iCIMS','Leader per most summaries','Strategic Leader, 5th year','—'],
+['SAP (SmartRecruiters)','Leader (SAP announcement)','—','Peer Insights Customers’ Choice 2026'],
+['Phenom','Visionary, 2nd year','Strategic Leader, 6th year','Everest PEAK Leader (Candidate Engagement 2025, Skills Intelligence 2026); IDC MarketScape Leader 2025'],
+['Eightfold AI','Visionary; new to the suites MQ','Strategic Leader, 4th year','IDC MarketScape Leader 2025'],
+['hackajob','—','Potential Leader','—'],['EVA.ai','—','Potential Performer','—'],['Adway','—','Core Leader','—'],['CleverConnect','—','Core Leader','—'],['Gaia','—','Core Leader','—'],['Arctic Shores','—','Core Challenger','—'],['AssessFirst','—','Core Challenger','—'],['Bryq','—','Potential Challenger','—'],['Cielo (RPO)','—','—','Everest RPO PEAK Global Leader']];
+const EVENTS=[
+{s:'2026-11-09',e:'2026-11-11',n:'ERE Recruiting Innovation Summit',l:'San Diego',x:'Opened with an evidence-based AI keynote. No post-event recap found yet.'},
+{s:'2026-10-26',e:'2026-10-28',n:'Gartner HR Symposium/Xpo',l:'Orlando',x:'Briefings for CHROs and HR leaders. No recap found yet.'},
+{s:'2026-10-20',e:'2026-10-22',n:'HR Technology Conference',l:'Las Vegas',x:'Agents moved from answering questions to doing work, governance and agent permissions took centre stage, and hiring fraud came up repeatedly.'},
+{s:'2026-10-12',e:'2026-10-15',n:'Workday Rising',l:'Las Vegas',x:'Workday announced Autopilot agents and an Agent Passport to verify third-party agents.'},
+{s:'2027-03-10',e:'2027-03-11',n:'HRcoreLAB Summit',l:'Barcelona',x:'Agenda not yet published.'},
+{s:'2027-03-16',e:'2027-03-17',n:'Recruitment Agency Expo',l:'London',x:'Trade show for recruitment agencies.'},
+{s:'2027-04-11',e:'2027-04-14',n:'SHRM Talent Conference & Expo',l:'Denver area',x:'Recruiting sessions on sourcing, screening and AI.'},
+{s:'2027-04-12',e:'2027-04-14',n:'Transform',l:'Las Vegas',x:'For CHROs and HR tech founders.'},
+{s:'2027-04-13',e:'2027-04-15',n:'UNLEASH America',l:'Miami',x:'HR and workforce technology event.'},
+{s:'2027-04-21',e:'2027-04-22',n:'HR Tech Europe',l:'Amsterdam',x:'HR technology strategy and implementation.'},
+{s:'2027-06-27',e:'2027-06-30',n:'SHRM Annual',l:'Venue to confirm',x:'SHRM’s flagship event; calendars disagree, so verify.'},
+{s:'2027-10-26',e:'2027-10-28',n:'HR Tech',l:'Las Vegas',x:'The flagship HR technology show.'}];
+const TL=[['2024','Workday acquires HiredScore, adding AI matching to its suite.'],['Sep 2025','SAP completes its SmartRecruiters acquisition.'],['Oct 2025','Workday completes its roughly $1B Paradox acquisition, adding conversational hiring.'],['Mar 2026','iCIMS launches AI-led high-volume hiring.'],['May 2026','Gartner publishes its 2026 Magic Quadrant for talent acquisition suites.'],['Oct 2026','Workday launches Autopilot agents; HR Tech centres on agents and governance.'],['9 Mar 2027','Hearing on whether the Mobley v. Workday age-bias claim proceeds as a collective.'],['2 Dec 2027','EU high-risk AI hiring obligations now due.']];
+const GL=[['ATS (applicant tracking system)','Software that tracks candidates through hiring stages and keeps the compliance record.'],['TA suite','An ATS plus sourcing, candidate relationship tools, scheduling and assessments in one platform.'],['HCM','Human capital management: the wider HR system covering payroll, performance and more.'],['Agentic recruiting','AI that takes multi-step actions such as sourcing, screening and scheduling, rather than only suggesting.'],['RPO','Recruitment process outsourcing: a provider runs part or all of your hiring.'],['Bias audit','An independent test of whether an automated hiring tool treats groups differently. Required in some places, such as New York City.'],['MCP','A standard that lets AI tools connect to systems such as HR platforms.']];
+
+/* ---------- static render ---------- */
+$('pipe').innerHTML=STAGES.map(s=>`<li><a href="#fit">${esc(s[0])}</a><span>${esc(s[1].split(':')[0])}</span></li>`).join('');
+$('stages').innerHTML=STAGES.map(s=>`<div class="box"><h3>${esc(s[0])}</h3><p>${esc(s[1])}</p>${s[2].map(v=>`<span class="v">${esc(v)}</span>`).join('')}</div>`).join('');
+$('shifts').innerHTML=SHIFTS.map(s=>`<div class="item"><h3 style="margin:0 0 4px">${esc(s[0])}</h3><p>${esc(s[1])}</p></div>`).join('');
+$('stats').innerHTML=STATS.map(s=>`<div class="box stat"><b>${esc(s[0])}</b><span>${esc(s[1])}</span><small>${esc(s[2])}</small></div>`).join('');
+table($('fund'),['Company','Focus','Amount','Round'],FUND);
+table($('cad'),['Assessment','Last','Next'],CAD);
+$('tl').innerHTML=TL.map(t=>`<li><b>${esc(t[0])}</b>${esc(t[1])}</li>`).join('');
+$('gl').innerHTML=GL.map(g=>`<dt>${esc(g[0])}</dt><dd>${esc(g[1])}</dd>`).join('');
+
+let an='All';
+function renderAn(){const ix={Gartner:1,Fosway:2,'Everest / IDC / other':3};
+ $('anchips').innerHTML=['All','Gartner','Fosway','Everest / IDC / other'].map(c=>`<button class="chip" aria-pressed="${c===an}" data-c="${esc(c)}">${esc(c)}</button>`).join('');
+ $('anchips').querySelectorAll('button').forEach(b=>b.onclick=()=>{an=b.dataset.c;renderAn()});
+ table($('an'),['Vendor','Gartner MQ, TA suites (May 2026)','Fosway 9-Grid, TA (May 2026)','Everest, IDC and others'],AN.filter(r=>an==='All'||r[ix[an]]!=='—'))}
+renderAn();
+
+const today=new Date();today.setHours(0,0,0,0);
+const rng=e=>{const a=new Date(e.s+'T00:00'),b=new Date(e.e+'T00:00');return a.getMonth()==b.getMonth()?`${a.getDate()}–${b.getDate()} ${MO[b.getMonth()]} ${b.getFullYear()}`:`${a.getDate()} ${MO[a.getMonth()]} – ${b.getDate()} ${MO[b.getMonth()]} ${b.getFullYear()}`};
+const EV=e=>`<div class="item"><div class="meta"><span class="tag">${rng(e)}</span><span>${esc(e.l)}</span></div><h3>${esc(e.n)}</h3><p>${esc(e.x)}</p></div>`;
+const end=e=>new Date(e.e+'T00:00');
+$('up').innerHTML=EVENTS.filter(e=>end(e)>=today).sort((a,b)=>a.s<b.s?-1:1).map(EV).join('')||'<div class="empty">None listed.</div>';
+$('done').innerHTML=EVENTS.filter(e=>end(e)<today).sort((a,b)=>a.s<b.s?1:-1).map(EV).join('')||'<div class="empty">None listed.</div>';
+
+/* ---------- live data ---------- */
+let ITEMS=[],aiCat='All',cat='All',q='';
+const sortD=a=>a.slice().sort((x,y)=>x.date<y.date?1:-1);
+function renderLive(updated){
+ const has=ITEMS.length>0,ai=ITEMS.filter(i=>AI(i.category)),biz=ITEMS.filter(i=>BIZ(i.category));
+ $('live').hidden=!has;
+ if(has)$('live').innerHTML=`<div><b>${ITEMS.length}</b>items tracked</div>`+(ai.length?`<div><b>${ai.length}</b>on AI in hiring</div>`:'')+(updated?`<div><b><i></i>${new Date(updated).toLocaleDateString(undefined,{day:'numeric',month:'short'})}</b>last refreshed</div>`:'');
+ $('sigh').textContent=has?'What just happened':'Five shifts to watch';$('sigp').textContent=has?'The newest items, picked up automatically from trade press and news feeds.':'The themes shaping the hiring-technology market right now.';$('shh').hidden=!has;
+ $('sig').hidden=!has;$('sigcols').classList.toggle('one',!has);
+ if(has){const [lead,...rest]=ITEMS;
+  $('sig').innerHTML=`<div class="lead-item"><div class="meta">${tag(lead.category)}<span>${fd(lead.date)}</span><span>${esc(lead.source)}</span></div><h3><a href="${esc(lead.url)}" target="_blank" rel="noopener">${esc(lead.title)}</a></h3>${lead.summary?`<p>${esc(lead.summary)}</p>`:''}</div>`+rest.slice(0,5).map(ONE).join('')}
+ $('aifeed').hidden=!ai.length;
+ if(ai.length){const cats=['All',...new Set(ai.map(i=>i.category))];
+  $('aichips').innerHTML=cats.map(c=>`<button class="chip" aria-pressed="${c===aiCat}" data-c="${esc(c)}">${esc(c.replace('AI: ',''))}</button>`).join('');
+  $('aichips').querySelectorAll('button').forEach(b=>b.onclick=()=>{aiCat=b.dataset.c;renderLive(updated)});
+  $('ailist').innerHTML=ai.filter(i=>aiCat==='All'||i.category===aiCat).slice(0,8).map(ONE).join('')}
+ $('dwrap').hidden=!biz.length;$('dcols').classList.toggle('one',!biz.length);
+ if(biz.length)$('dlist').innerHTML=biz.slice(0,6).map(ONE).join('');
+ $('all').hidden=!has;$('navAll').hidden=!has;
+ if(has){const all=['All',...new Set(ITEMS.map(i=>i.category))];
+  $('cc').innerHTML=all.map(c=>`<button class="chip" aria-pressed="${c===cat}" data-c="${esc(c)}">${esc(c)}</button>`).join('');
+  $('cc').querySelectorAll('button').forEach(b=>b.onclick=()=>{cat=b.dataset.c;renderLive(updated)});
+  const t=q.toLowerCase();
+  $('alist').innerHTML=ITEMS.filter(i=>(cat==='All'||i.category===cat)&&(i.title+' '+i.summary+' '+(i.vendors||[]).join(' ')).toLowerCase().includes(t)).slice(0,60).map(ONE).join('')||'<div class="empty">No items match. Clear the search or pick another category.</div>'}
 }
-$("q").oninput=e=>{q=e.target.value;render()};
-fetch("data/items.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{
-  items=d.items;
-  $("upd").textContent="Last refreshed "+new Date(d.updated).toLocaleString()+" · "+items.length+" items";
-  render();
-}).catch(()=>{$("upd").textContent="Could not load data/items.json. Serve this folder over http (for example GitHub Pages), not as a local file."});
+let win=7;
+const dstr=d=>d.toISOString().slice(0,10);
+let pulseInit=false;
+function renderPulse(){
+ const inWin=n=>{const c=new Date();c.setDate(c.getDate()-n);return ITEMS.filter(i=>i.date>=dstr(c))};
+ const show=inWin(30).length>0;$('pulse').hidden=!show;$('navPulse').hidden=!show;
+ if(!show)return;
+ if(!pulseInit){pulseInit=true;if(!inWin(7).length)win=30}
+ $('wchips').innerHTML=[7,30].map(n=>`<button class="chip" aria-pressed="${n===win}" data-n="${n}">${n} days</button>`).join('');
+ $('wchips').querySelectorAll('button').forEach(b=>b.onclick=()=>{win=+b.dataset.n;renderPulse()});
+ const rows=inWin(win),counts={};rows.forEach(i=>counts[i.category]=(counts[i.category]||0)+1);
+ const ent=Object.entries(counts).sort((a,b)=>b[1]-a[1]),max=ent.length?ent[0][1]:1;
+ $('bars').innerHTML=ent.length?ent.map(([c,n])=>`<div class="br"><span>${esc(c)}</span><span class="track"><i class="${AI(c)?'ai':BIZ(c)?'biz':''}" style="--w:${Math.max(6,n/max*100)}%"></i></span><b>${n}</b></div>`).join(''):`<div class="empty">Nothing in the last ${win} days.</div>`;
+ const days=[];for(let k=13;k>=0;k--){const d=new Date();d.setDate(d.getDate()-k);days.push(dstr(d))}
+ const dc=days.map(d=>ITEMS.filter(i=>i.date===d).length),m=Math.max(1,...dc);
+ $('sparkwrap').hidden=!dc.some(n=>n>0);
+ $('spark').innerHTML=dc.map((n,k)=>`<i class="${k===13?'today':''}" style="--h:${Math.max(5,n/m*100)}%" title="${days[k]}: ${n} items"></i>`).join('');
+ $('digest').hidden=!rows.length;
+ if(rows.length){const line=i=>`• ${i.title} (${i.source}, ${fd(i.date)})\n  ${i.summary?i.summary+'\n  ':''}${i.url}`;
+  const grp=[['AI IN HIRING',rows.filter(i=>AI(i.category))],['FUNDING AND DEALS',rows.filter(i=>BIZ(i.category))],['OTHER MARKET NEWS',rows.filter(i=>!AI(i.category)&&!BIZ(i.category))]].filter(g=>g[1].length);
+  $('dg').textContent=`Talent Market Lens: last ${win} days\n`+grp.map(g=>`\n${g[0]}\n`+g[1].slice(0,5).map(line).join('\n')).join('\n')+`\n\nFull tracker: ${location.href.split('#')[0]}`}
+}
+$('cp').onclick=async()=>{const t=$('dg').textContent;let ok=true;
+ try{await navigator.clipboard.writeText(t)}catch(e){const a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();try{ok=document.execCommand('copy')}catch(_){ok=false}a.remove()}
+ $('cps').textContent=ok?'Copied':'Copy failed. Select the text and copy it manually.';setTimeout(()=>$('cps').textContent='',2500)};
+$('q').oninput=e=>{q=e.target.value;renderLive(window.__u)};
+fetch('data/items.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{ITEMS=sortD(d.items||[]);window.__u=d.updated;renderLive(d.updated);renderPulse()})
+ .catch(e=>{console.warn('data/items.json not loaded:',e);renderLive(null);renderPulse()});
 </script>
 </body>
 </html>
