@@ -1,5 +1,286 @@
-{"updated":"2026-11-23T00:00:00+00:00","items":[
-{"id":"seed0001","date":"2026-11-20","title":"Archer raises $10M to expand AI tools for candidates and recruiters","url":"https://www.unite.ai/archer-raises-10m-to-expand-ai-tools-for-candidates-and-recruiters/","source":"Unite.AI","category":"Funding","vendors":["Archer","hackajob"],"summary":"Volition Capital led a $10M round; a candidate agent launches in January and Archer OS for TA teams in Q1 2027."},
-{"id":"seed0002","date":"2026-11-10","title":"Workday asks court to decertify the Mobley age-bias collective","url":"https://www.noova.global/blog/mobley-v-workday/","source":"NOOVA","category":"Legal","vendors":["Workday"],"summary":"Workday argues employers configure and decide independently, so claims need individual review; hearing set for 9 March 2027."},
-{"id":"seed0003","date":"2026-09-30","title":"Metaview raises $60M Series C led by Insight Partners","url":"https://genztech.blog/funding-tracker/","source":"Tech Funding Tracker","category":"Funding","vendors":["Metaview"],"summary":"Agentic recruiting company funds expansion of agents that source, screen and summarise candidates."}
-]}
+{
+ "updated": "2026-11-24T07:33:26+00:00",
+ "items": [
+  {
+   "id": "611a6910d6b409f6",
+   "date": "2026-11-24",
+   "title": "Brain Commerce buys HR tech firm Weperson to drive AI, robotics push",
+   "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPQnpSUU5aSUdYR0RZcklOZEVSMnlIV2U3UVctb0lNckl0LWFDcTdyV3dSZnZQdXJUbGJ5Zm56UVJaRFVsQ2J1bVY1aVpzcXRwV2IxWVVXY3c1Z3JZVmwyTFduZGtzTnVHRWFiVkNzNnJlZnVQeTdFdnlORVVTeEVZb3ZCT1lnSnVxR0RSUmF2NC1rUS01SUZJaWVYM1RYaVBoZVJn?oc=5",
+   "source": "Dealroom",
+   "category": "M&A",
+   "vendors": [],
+   "summary": "Reported by Dealroom.",
+   "via": "rules"
+  },
+  {
+   "id": "d53e166fa7d81aa0",
+   "date": "2026-11-23",
+   "title": "Workday Candidate Profile Reinvents How People Apply to Jobs",
+   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE42OW1XT2RqUF9GY0w1dUktQUFpSGlRRDlvYng4R1pWYk12RHNseVg2TXdrdnI0M1dQMS0taTVoNWVzS2ZGMzVDYzlmdk1ENm5YN1R5SHFKNUY3cWQyS3hJNUtWeUowTm0tU3ZIMGhn?oc=5",
+   "source": "Workday Blog",
+   "category": "Other",
+   "vendors": [
+    "Workday"
+   ],
+   "summary": "Other: Workday. Reported by Workday Blog.",
+   "via": "rules"
+  },
+  {
+   "id": "b5fbde1bbd2ad41e",
+   "date": "2026-11-23",
+   "title": "Woman Applies for Jobs at Microsoft, Netflix and PayPal Without Interview, Sues AI Hiring Firm",
+   "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE12NE5vNVFWUDlmR0Z5RUZsTzd5SFo5ZERVZXhqS2F0emNLTEJBZUlCSTdsS3dVRDRaNDExQnVSU3I1bHJiaklUeTlPUkRTTlVZc2c1ZThteFFrckNYZ1JmSklva2VDcHBRaVZGWFZTVDJvNnF0SllEUmxtSnhKV1U?oc=5",
+   "source": "www.techtimes.co.uk",
+   "category": "AI: Recruiter experience",
+   "vendors": [],
+   "summary": "Reported by www.techtimes.co.uk.",
+   "via": "rules"
+  },
+  {
+   "id": "0a967e6d89151891",
+   "date": "2026-11-23",
+   "title": "Is AI Hiring Safe Under the Data Privacy Act? Eight Steps Philippine Employers Should Take",
+   "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNNF9LT2ROYVFkbFFMc0NjM29IbmFaX0dGdVZaMHE0dzJlSU1fdUtCYkx6bXhxYjJ4eHJsdnVubVFocW5lTmtlMmpydDA0UUFfMHhVVXprUzhsYWdrbTZwMzJCUXN2OUptV1NVOF9lWFY1TDhKWDd2d1E1dFFqVk5ieHNPNEIxM2diSnFseWVjdzNvTktEcUpiNDZlUjZtQkMyaG0zSVJ4LV9ZeXFUR0JZTElVbUs0U3ZVNGNwcjRXT0FhUQ?oc=5",
+   "source": "Voice of ASIA",
+   "category": "Other",
+   "vendors": [],
+   "summary": "Reported by Voice of ASIA.",
+   "via": "rules"
+  },
+  {
+   "id": "c3ca8bc1cb0333e4",
+   "date": "2026-11-23",
+   "title": "Pindrop Launches Tool to Detect Hiring Fraud",
+   "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNS1k2Z2xLU3R6aTZvWjZXS1VFRXA0cVd5dXJaSTZBWnN6Zk9JdXQwamJrbHJMZGNHdC1uSXJBam5LNklfQkt2ZERNY0x3YXVGdDJKYnpQY2dxdkZoVmsydTNFMDZpeXdZekh5ZC1tMjVfMFQwY0o5YXE3U3lSb2FQTkFHMUNoNWNSODRHQ3dFcw?oc=5",
+   "source": "Wisevoter",
+   "category": "AI: Trust & fraud",
+   "vendors": [],
+   "summary": "Reported by Wisevoter.",
+   "via": "rules"
+  },
+  {
+   "id": "0757b45bacdc3368",
+   "date": "2026-11-21",
+   "title": "Paste Your Resume Into Notepad. That’s Roughly What the Software Got.",
+   "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBUTG9JOUtyNk1na1AzZWNFMXQtcWNZdGxLbmhaOGVuaHI1elBNTXJ4T3dYQ1F0UHIzVUo5TmViV2hBd3lDUlEtMHBhOXRxaGgzMDFOY1l0T005N2lBN2FhUmdTWld3UQ?oc=5",
+   "source": "College Recruiter",
+   "category": "Other",
+   "vendors": [],
+   "summary": "Reported by College Recruiter.",
+   "via": "rules"
+  },
+  {
+   "id": "seed0001",
+   "date": "2026-11-20",
+   "title": "Archer raises $10M to expand AI tools for candidates and recruiters",
+   "url": "https://www.unite.ai/archer-raises-10m-to-expand-ai-tools-for-candidates-and-recruiters/",
+   "source": "Unite.AI",
+   "category": "Funding",
+   "vendors": [
+    "Archer",
+    "hackajob"
+   ],
+   "summary": "Volition Capital led a $10M round; a candidate agent launches in January and Archer OS for TA teams in Q1 2027."
+  },
+  {
+   "id": "0a0d9e368be25c0c",
+   "date": "2026-11-20",
+   "title": "Olamee Announces General Availability of AI Hiring Platform That Unifies Sourcing, ATS and Employer of Record",
+   "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOdmFORDhQZmRfREVwQndzT0c2SjJpSXFRbFZFcFNUbFd3b3FHQy1VcmlnZkdSSlpyVi1zZnQ0YjZhMXpwYmtHMWlvTVo0R09HamN6WlctVGpDY0xDUFN2cU9yaTVsNWVBZzB4c0RTeVk4b0NHREVoTHZiWG9sWW5iaUdIcFRvSnYxNE1CWkJ6THlIWlBVcHM1V0NMRWJfUGcydm9OOTZtTnhZekk4ZDJ4cVZLN3JkY291Wk1TWFRyN0I2NEtsUHk2RjY2QmdsTDhQQU5RZ3U3VQ?oc=5",
+   "source": "HRTech Series",
+   "category": "AI: Recruiter experience",
+   "vendors": [],
+   "summary": "Reported by HRTech Series.",
+   "via": "rules"
+  },
+  {
+   "id": "7ae66b21fef5f26f",
+   "date": "2026-11-20",
+   "title": "Companies Turn to AI Recruiters to Screen Applicants",
+   "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQaF8zRURSMmtrcjMxNHdrYzd2b2pKazNYc2lkUTJUcjd3ZFlybzNHMTlrdTFlemlaOXZKSTlQYkhRX1pOOUFhWW5fS0V0aGowZFg3UDFCOFhCVzNQcDBXZ200M3E4ZU9kWFB4SmhjYkZRZTJ4MUlTcF91RXlsWk5tTjgtV0dJSklIa1Y0?oc=5",
+   "source": "Wisevoter",
+   "category": "AI: Candidate experience",
+   "vendors": [],
+   "summary": "Reported by Wisevoter.",
+   "via": "rules"
+  },
+  {
+   "id": "fe4cc9008ccf586c",
+   "date": "2026-11-20",
+   "title": "London-based Archer raises €9.1 million to deploy AI recruiting agents for employers and job seekers",
+   "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNb2NBSV9oWVB1cUgtNWdNLUEtS0RxdTRRTDBQSFQyOEcxZXZfUW1UTU0wUE8wVHdHeG9pNFhuNjRORU1aU2JrUjlodVZhRU9jdlFsTTZCYmFjR0xnd1kzcmFfQzYyQ3pWOFJGZ2hQUlhrczBSeGxfTk9vY1ZZN19lWjhWc3pFNFdvc0RMWU5LN2hFdm92TGswSGJONmlkQnBxTkpNeVpFaWxoTXRJWUFNeEQ1NXRwZGh3RFRLMjhBVGFlN1FGQXJQRzJVMkJsa1F5R3Rn?oc=5",
+   "source": "EU-Startups",
+   "category": "Funding",
+   "vendors": [
+    "Archer"
+   ],
+   "summary": "Funding: Archer. Reported by EU-Startups.",
+   "via": "rules"
+  },
+  {
+   "id": "aefa355dfb510b57",
+   "date": "2026-11-20",
+   "title": "52% of US Employers Use AI Interviews While 90% Believe They Rejected Real Applicants",
+   "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQODNMU010RW9DQTBrVGVPQVY5WFprUjB2Uml6aTdxdEdPRm1XUlhQaWQ3emxDTkJmQlFuOFhqLW1WN3RyVW5mM3o0WVpSX252LXdtOXdwWS1UVFYzZlRwd2s5UzAzcVJ5NFJzVTFfU2dOVkdxREl6TXNueGpKcUQ0Z2MwYXB3ZTQ4c0xKMS1Fd1RaR1U?oc=5",
+   "source": "Metaintro",
+   "category": "AI: Candidate experience",
+   "vendors": [],
+   "summary": "Reported by Metaintro.",
+   "via": "rules"
+  },
+  {
+   "id": "47baf3420b7454c4",
+   "date": "2026-11-19",
+   "title": "ATS Mako Unleashes 15 Powerful New Features This Thanksgiving, Putting AI Agents, Calling, Video and Employee Management in One Platform",
+   "url": "https://news.google.com/rss/articles/CBMilAJBVV95cUxQOGM4S0ZFenY4YTFXUmNrckM1WXI4dEQzcWl5bnZBZ3o1dnJDOXh2Y2UxVnpLR1RKRE1SZVQyN2p5N2hTbEZ0aC1wUTBqQ3FtejBXY3BVSXBMS0x6UjlUenlQQVZNNTZsZmY0Y1duVWlVbXg1UTdSaThEcmEwUzM5ZGtwWUoxVU9yMFQ5RWpkdEJQWExHSk96bG05VURkZkw4SHVlMTdpdjQxYW5LQzhHVmFIcnctNDM1OGxJV0VVcmQwa0puRVZDLTRLRVh0UzVHeXRfR3QxX0ZuTzhXdGs5WmI4OWkya2F3Ni1MMEIweFBWSTZmdHgwRmZ0WFM3TUFSVVd6aDNsaVp2eUpqdWdEcjhLY1k?oc=5",
+   "source": "HRTech Series",
+   "category": "AI: HR orgs",
+   "vendors": [],
+   "summary": "Reported by HRTech Series.",
+   "via": "rules"
+  },
+  {
+   "id": "753b12ffba071fda",
+   "date": "2026-11-19",
+   "title": "Deepfake candidates are coming for your hiring pipeline",
+   "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOUWViWWVKSk9zZ0RmS0ltbXRpNEl2cjRzUTlFOGJzYkh4akoyVFl4Y3JmSEFVdkZQRzhVaVc5VmdUMGJ5ZHJjczBCNGllS2EzcDhBZmpNSjRVeEpRUF9Gbno3N3FyRlBjQmRsR1dhTDRBb0t2cDliT1N2aHYwaDZSNVgzRGFuS2RudXhCRndlOEdIaVk?oc=5",
+   "source": "Dealroom",
+   "category": "AI: Trust & fraud",
+   "vendors": [],
+   "summary": "Reported by Dealroom.",
+   "via": "rules"
+  },
+  {
+   "id": "d36fb5172ae358c9",
+   "date": "2026-11-19",
+   "title": "Infographic: The AI Expectation Gap: Are HR Tech Providers Keeping Up ? - People Matters",
+   "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPUW9SMVVHcmJSbk5EaGJfLWVoU2R5dlhiSlRCMVdzeU5xYktwVWhzNlFITjVia2c1LXd5b0JPZnJRZEFZWnp0WVJrNlRXZHR5VkRtczZvOWV6dWlKb0p0V0lZVTVoVUJFZUR1ZVN6aUVzVGRWLU5RUzAtUHNrMGZaN21KQTgzT3lfZEFVOGlBRVVYbXZQUzJIeml2d0pnVUJiR0w4QTVRc2VfemQxbG9pSEc4bWxCdDhyU0xOcllqQ0ptZkNMQVhFX3VOV2RVVmtJ?oc=5",
+   "source": "HR News",
+   "category": "AI: HR orgs",
+   "vendors": [],
+   "summary": "Reported by HR News.",
+   "via": "rules"
+  },
+  {
+   "id": "c03d4edcd6c654a6",
+   "date": "2026-11-18",
+   "title": "Happlicant launches New Recruiter Directory to help recruitment agencies find more leads",
+   "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQRm03MlNFaHVESTdtQzVPUGE3S1R4MzdneFpQd3BBVG1JZXRRYWFxZkZTbm1ZUlZlV3NUQ09nS0VsaEFGeHQ1d2lxMEZpM2h1bDF2RlZETmQtVUFPUUVDRVhDc0tTTjEydHZWQzBwZjhJbmpNZGxKd3hHSTVOZW8ycjBhRVNVVHVKVnh4ZHdUazIxR0dRN0g0TjlSNGhNYVBkNmx6bF9tVkFWZkRJM0tZdVRLcTYzTXV3YmJzY1ZJOTdwQWRURG9nV28tMS1ZQVZYVXNMSlpOMA?oc=5",
+   "source": "USA Today",
+   "category": "Product",
+   "vendors": [],
+   "summary": "Reported by USA Today.",
+   "via": "rules"
+  },
+  {
+   "id": "f6ea81fea5acaa98",
+   "date": "2026-11-18",
+   "title": "SAP Recognized as a Customers’ Choice in the 2026 Gartner Peer Insights™ Voice of the Customer for Talent Acquisition (Recruiting) Suites",
+   "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNdDZSQUZkNkljN2dxZW1WMkhwczZyNXNqUVREWVVpazJ2Z3FKOHNMNVZrdXZ0ZENCWU5VLVpLN1RMRURQZmdnRW82cUE3RVB2OGlBU1RjZkhJRVgzWmZueDh1dnlDUjYzd1hObDk0S0NIc0FEWDNDWmRGVHVadkswWTFrbHdYbDU5Skh5YnZR?oc=5",
+   "source": "SAP News Center",
+   "category": "M&A",
+   "vendors": [
+    "Gartner"
+   ],
+   "summary": "M&A: Gartner. Reported by SAP News Center.",
+   "via": "rules"
+  },
+  {
+   "id": "9cce58e891b343ae",
+   "date": "2026-11-18",
+   "title": "Workday Recognised as a Leader in Inaugural 2026 Gartner® Magic Quadrant™ for Workforce Management Technology",
+   "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNdW1Eb181ZlQ5aGxTamVSVWNWanc3NmJIYkZGRmFkaXpMTjJVWnZjaUg3ZUlrMk5VWllBblYzWW1DMncwbjBEWVFiRHlDVHluenNHc1BzQldSRFh6aXZCUlZvd3lZYVptdVN3cllXSGxIbW5DTlhTWjhCbUVNNUpCTTAzZU5hOEVhVTgtZw?oc=5",
+   "source": "Workday Blog",
+   "category": "Analyst",
+   "vendors": [
+    "Workday",
+    "Gartner"
+   ],
+   "summary": "Analyst: Workday, Gartner. Reported by Workday Blog.",
+   "via": "rules"
+  },
+  {
+   "id": "3327f8fe46c912bf",
+   "date": "2026-11-18",
+   "title": "At RIS, Veterans and Recruiters Confront the Hiring Gap",
+   "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPZFJsOHRWTm5scmJadGVGQTJFaEJuczZQaGxJY0hWMnVrc3VEUldBMkpQQ3BxSWFqV1VJY1N0VmpTTTllMDgwLWNTS2lvMmdJMHl3RHFPVk5WenNSdXRSMEJhbnFJRENrV1lUdXBrcmtrNzRuQVZOenZuMkMzYUJkZXkxNVhmR0xTNUdN?oc=5",
+   "source": "TLNT",
+   "category": "Other",
+   "vendors": [],
+   "summary": "Reported by TLNT.",
+   "via": "rules"
+  },
+  {
+   "id": "21fa6616ccb580c4",
+   "date": "2026-11-17",
+   "title": "Spott raises $21M Series A to build the global AI-native operating system for recruitment agencies",
+   "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQZUIza2M3V3hsTDJla0JZemx1dEU5Q1c5WWJFLV9yUjYxazY5ZTZVMXhZRDhibmdTOUZNbGg2RGJBRVB4cF9hM2Q1S09tSEd0akNPaFFVbzZpdExkamdtM2xlbkRKRGMxWktMUmxjdi01WTRhVGVSMmpOYmNvVkdVNHJ1blM5MXhnRUU2RTliUlZyN0k3ZUE1ZVlZbWdzR3dGLWt3MXpzUGNQa25QbFJOd3QwV2RDTWtIZlYxNEtCa0pqWnpUdC1XcGgxcXl0Zw?oc=5",
+   "source": "The Global Recruiter",
+   "category": "Funding",
+   "vendors": [
+    "Spott"
+   ],
+   "summary": "Funding: Spott; $21M Series A. Reported by The Global Recruiter.",
+   "via": "rules"
+  },
+  {
+   "id": "b3353f8057a43683",
+   "date": "2026-11-17",
+   "title": "Joveo Launches Tandem, the AI Recruiting Agent That Turns Prompts Into Hires",
+   "url": "https://news.google.com/rss/articles/CBMilAJBVV95cUxOU3FRczhFcTljU0xaUy1lbjVrdkN0aEU3LUdPQW1WME1lWHJOMzBIUW4wQWpuU2VXZzl2T2kxSTZOY2J6MVVFN0RMUTRnS29SRE1BTl9ZTVNfZFJ4SkZ1SHpxbUk2dlpLd0dta0l3bUJ2WWhxYV9YVTFWXzNPRzVtWWhLQk1EZ20xMnJkRkYtQVh0Q0M3UkVMTXZjSFB4NkJlT0xkWE9OWGREeWxQNU5zaUxscHJ2LWFlUTRTSFFxblVVT1RBSERzb0I2NmhqTmtibks5ZzFGVENLc3JkYU50Q2RXU2ZmYkdkTk91TGJ6a1R1UFUzV010ODM5VE90OGs5dWFmOXlHYUxkcEk2S2NtRVJheHI?oc=5",
+   "source": "The Daily Tribune News",
+   "category": "Product",
+   "vendors": [
+    "Joveo"
+   ],
+   "summary": "Product: Joveo. Reported by The Daily Tribune News.",
+   "via": "rules"
+  },
+  {
+   "id": "dba798da93b3b520",
+   "date": "2026-11-17",
+   "title": "Hiring Fraud Is the New Brand Risk: How to Avoid Fake Candidates",
+   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBNTlVZYWQtOHV0Xzd3WGdOdjkzcW1vbTlDeE5tM1g4djBxZXlXQ2o3UmQyTDZKTThHS05JWHNqZzVsLWVtMDdETEVZZG5NWGJRNW9FbV95ZF9GaWFoSHJhVkY3S18wenB1dEFYVVpfenk?oc=5",
+   "source": "Marketing91",
+   "category": "AI: Trust & fraud",
+   "vendors": [],
+   "summary": "Reported by Marketing91.",
+   "via": "rules"
+  },
+  {
+   "id": "e17219895d8a9afd",
+   "date": "2026-11-17",
+   "title": "Zinc creates a buzz with HR Tech Provider of the Year Award",
+   "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOX2lwNGlKdG5va09aZ2tRY1UxS25WNVlRZy1tUFpkV0p4QVVUYXlKdWd4WmtEbW1ibzJpb0tkOXBjeUp0WFF4WjF3Z1J3S2lGNHBxZU5zWVB5cF9nSlZKY3ZFLVkxVzFHZHdaRGl4ellhYXJDQUM0aE9PNzZTaWo0d0h2OS1laHBNU3phUkRQbW5EVFdrZEhiZUhUaTY3U3Bod2Ew?oc=5",
+   "source": "Personnel Today",
+   "category": "Other",
+   "vendors": [],
+   "summary": "Reported by Personnel Today.",
+   "via": "rules"
+  },
+  {
+   "id": "seed0002",
+   "date": "2026-11-10",
+   "title": "Workday asks court to decertify the Mobley age-bias collective",
+   "url": "https://www.noova.global/blog/mobley-v-workday/",
+   "source": "NOOVA",
+   "category": "Legal",
+   "vendors": [
+    "Workday"
+   ],
+   "summary": "Workday argues employers configure and decide independently, so claims need individual review; hearing set for 9 March 2027."
+  },
+  {
+   "id": "seed0003",
+   "date": "2026-09-30",
+   "title": "Metaview raises $60M Series C led by Insight Partners",
+   "url": "https://genztech.blog/funding-tracker/",
+   "source": "Tech Funding Tracker",
+   "category": "Funding",
+   "vendors": [
+    "Metaview"
+   ],
+   "summary": "Agentic recruiting company funds expansion of agents that source, screen and summarise candidates."
+  }
+ ]
+}
