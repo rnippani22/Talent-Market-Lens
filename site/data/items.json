@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T07:33:26+00:00",
+ "updated": "2026-11-24T07:55:32+00:00",
  "items": [
   {
    "id": "611a6910d6b409f6",
@@ -10,6 +10,17 @@
    "category": "M&A",
    "vendors": [],
    "summary": "Reported by Dealroom.",
+   "via": "rules"
+  },
+  {
+   "id": "16ad350448c9d96e",
+   "date": "2026-11-24",
+   "title": "AI Recruitment Compliance France: A 2026 Guide for Employers",
+   "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxObXZOdWJnSUdkaDJzcmNsa2ZxZWlaR1Y4TnNzRFlpZUpVcDZJN3RDNmFQbEROdV9OVlI4ckNXY2U2ZTRuT1I3TFJlbXlGRzVTYVBnLXJjRml6UTRPY096ZHdyWWN3RWdzeG1ZUUlpYWx5elZrNWpyUVZicnprSDZoLVVHWnJQcy1Nbk1lalAzanJtcGwyV19V?oc=5",
+   "source": "Global Advisory Experts",
+   "category": "AI: Regulation",
+   "vendors": [],
+   "summary": "Reported by Global Advisory Experts.",
    "via": "rules"
   },
   {
