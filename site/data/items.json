@@ -1,6 +1,17 @@
 {
- "updated": "2026-11-25T08:40:11+00:00",
+ "updated": "2026-11-25T21:44:41+00:00",
  "items": [
+  {
+   "id": "1805fe2989f8367a",
+   "date": "2026-11-25",
+   "title": "HR Tech 2026: Beyond AI hype",
+   "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5JSy1TaXNpei04NXpIYnBLNXpSaGc4VzVsWW9GbW9zLWc5YXJ4Z3hmcnp5OENjeWpJY2R0YzV2OWlBbndwSDhjcEJhaVRPbmZxWFZRQVdNMUNNSHV6MldEVGln?oc=5",
+   "source": "HR Executive",
+   "category": "AI: HR orgs",
+   "vendors": [],
+   "summary": "Reported by HR Executive.",
+   "via": "rules"
+  },
   {
    "id": "611a6910d6b409f6",
    "date": "2026-11-24",
@@ -181,6 +192,17 @@
    "category": "AI: HR orgs",
    "vendors": [],
    "summary": "Reported by HR News.",
+   "via": "rules"
+  },
+  {
+   "id": "331401aec7eefab0",
+   "date": "2026-11-19",
+   "title": "Talview Class Action November 2026: AI Interview Proctoring as Illegal Lie Detector Under Massachusetts Law — Employer Liability & Four Steps to Take Now",
+   "url": "https://news.google.com/rss/articles/CBMilgJBVV95cUxOeGhfMGNSWTVJeHpxbXBld0l4SjNwTkhKUUJaWG9pZkFDVkR1UjZMNWFmWWMxZjVvNFdPUUY3azN0dXBnUjBKUXBjU1BmR0VCb1N4a1RUMGFEc2lMTmhwNzVYb25mVU9UUzNYQXN1dU5LdTZDMURGa0k1RW9vTnA1OG9FQmlPY1RmSWYtdVFaMHc5YUwyLU05OERfY0loZ2xISy1mMlpFbGtvRGVBV2VfUU5tMFZhdDM5MElOTmVULXUyTzZGS3ItUkhIWUt0VEpYSTluWTVJTGk0dDlsT2pMbkVSYWpFYzMxS3NyUG0zMVM4Sm9zSFdIdmNibkZKYjBxZll3ZGxpLUUwbHltclB6NlZDajgzZw?oc=5",
+   "source": "Crowell & Moring LLP",
+   "category": "Legal",
+   "vendors": [],
+   "summary": "Reported by Crowell & Moring LLP.",
    "via": "rules"
   },
   {
