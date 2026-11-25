@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T22:30:06+00:00",
+ "updated": "2026-11-25T08:40:11+00:00",
  "items": [
   {
    "id": "611a6910d6b409f6",
@@ -21,6 +21,17 @@
    "category": "AI: Regulation",
    "vendors": [],
    "summary": "Reported by Global Advisory Experts.",
+   "via": "rules"
+  },
+  {
+   "id": "87e7a487660ba453",
+   "date": "2026-11-24",
+   "title": "Brain Commerce acquires HR tech firm Pulsen to accelerate RX business",
+   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNNklIb2hVTUd6NHFVSkpVR0dscjZ0SW9qZ1BxSnR6U0t6SXhFQV80WjhiQjM1TzEwUnpib21nTDdiZ1Q2TllLSzJvM2p0dDJNM0dqUHZWVmRHVmhaUE5kcnY0eGM1ZDZ4VGE5MnNHcnlpajFucTdUS2hLUEdEQnlhVzFWSVpYQlFiOFBJY1M2VTNqcHFEVWRkcFg1NXlBM3pWQ0FDQUYyRmYtTE5jU3BBamM0Z1dPdw?oc=5",
+   "source": "디지털투데이",
+   "category": "M&A",
+   "vendors": [],
+   "summary": "Reported by 디지털투데이.",
    "via": "rules"
   },
   {
@@ -267,6 +278,17 @@
    "category": "Other",
    "vendors": [],
    "summary": "Reported by Personnel Today.",
+   "via": "rules"
+  },
+  {
+   "id": "c535c4867a31e170",
+   "date": "2026-11-17",
+   "title": "AI Continues to Reshuffle the HR Tech Market",
+   "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNWDZmbktvUGttYzBzdHZwYnBqY3h5aU9IUkk0b3otelB2MHNMN0RCc3dNcjdUNnUwcjNCbVNvZXYyeVFjNVVpcC1WcEN0Q1FXWHQ0cy1pU2tzMlM5b3NHNXhvZm1TaVdaZlFFS0pyM00wSHJFQzRWZ1l1VGVuOHhkNFdDZmYxWkF4NXU1bjNOU293UzFma2xBblNqSmphRHhybXJxNVd5Q0hiRk50YzZOcTM5Qk5CaXVLTkE?oc=5",
+   "source": "SHRM",
+   "category": "AI: HR orgs",
+   "vendors": [],
+   "summary": "Reported by SHRM.",
    "via": "rules"
   },
   {
