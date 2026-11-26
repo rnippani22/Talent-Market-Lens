@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-26T08:25:09+00:00",
+ "updated": "2026-11-26T21:37:16+00:00",
  "items": [
   {
    "id": "f67e3406e3ba6f67",
@@ -10,6 +10,19 @@
    "category": "AI: Trust & fraud",
    "vendors": [],
    "summary": "Reported by ITWeb.",
+   "via": "rules"
+  },
+  {
+   "id": "8ea51475d84e0daa",
+   "date": "2026-11-26",
+   "title": "Archer Raises $10 Million To Expand AI Recruiting For Candidates And Hiring Teams",
+   "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNcE0ya3o2WFAtVm9oT25uLW9VMFJRZ250QWlJdFh0S2g1MlQ5b0VEYkYtSEgzakRfVmd4a3VNRS1kZmxmYlJFSS1nMFgtWGZiaVBJMW9uTi1MZnA5MG9xcUZCWE5tNmVISW5CZUs3Q1dQX0FUNDZwS3paUzI5dnVXbjJnTzBUeFJmY2JWcE5ZRXJhOU4xSk05aFFzRjhzN3kyN2c?oc=5",
+   "source": "Pulse 2.0",
+   "category": "Funding",
+   "vendors": [
+    "Archer"
+   ],
+   "summary": "Funding: Archer; $10 Million. Reported by Pulse 2.0.",
    "via": "rules"
   },
   {
