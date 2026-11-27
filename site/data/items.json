@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-27T08:39:20+00:00",
+ "updated": "2026-11-27T21:21:21+00:00",
  "items": [
   {
    "id": "7b27408f4a567093",
@@ -159,6 +159,17 @@
    "category": "Other",
    "vendors": [],
    "summary": "Reported by College Recruiter.",
+   "via": "rules"
+  },
+  {
+   "id": "99a9d1d2cda3aa86",
+   "date": "2026-11-21",
+   "title": "Infographic: The AI Expectation Gap: Are HR Tech Providers Keeping Up?",
+   "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNV2ZzZ19rYzhMeVNQRFItbzFCYzhGM0JTUFAzbDl6M0RDU3BBcTBmdFUybHJKcUVTMHJ6RmVpMWFCWDBtQkZXV29GYzN6LUlCVUhWSW9FcF9naExlQ3JrNnBUelBQcGY4Z0JiZFZFVkFtS1dZQ2ZmUXdvTkdhNmlPSEtSbkFJVzRMRUhtT1FOSU9MbUJ0RUUtQkRxZGN4UjVUN1Y0ZjlnMTlDYXBTaXhNNTk4aW9aMjBtN3VsRzZxdzV3RE9UWVZPTkJ1eUtCRldNQmJmLXl2clhKQQ?oc=5",
+   "source": "People Matters Global",
+   "category": "AI: HR orgs",
+   "vendors": [],
+   "summary": "Reported by People Matters Global.",
    "via": "rules"
   },
   {
